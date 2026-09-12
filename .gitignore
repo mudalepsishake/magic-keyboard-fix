@@ -1,0 +1,31 @@
+# Visual Studio / MSBuild
+.vs/
+*.user
+*.suo
+*.VC.db
+*.VC.opendb
+
+# Driver build output
+driver/build/
+**/Debug/
+**/Release/
+*.pdb
+*.ilk
+*.iobj
+*.ipdb
+*.tlog
+
+# Locally generated signing/package output
+package/*
+testcert/*
+
+# NEVER commit private signing material
+*.pfx
+*.pvk
+*.snk
+*.key
+*.pem
+
+# Windows junk
+Thumbs.db
+Desktop.ini
