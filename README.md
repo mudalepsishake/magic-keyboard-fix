@@ -39,14 +39,15 @@ No Visual Studio or WDK is required to use the prebuilt driver. See the installa
 
 The downloadable v1 driver is **test-signed**, not Microsoft production-signed. Windows must therefore be in **TESTSIGNING** mode for the driver to load.
 
-1. Download **`Magic-Keyboard-Fix-v1-test-signed-EXACT.zip`** from the GitHub Releases page.
+1. Download **`Magic-Keyboard-Fix-v1-test-signed-EXACT.zip`** from the link above or from the GitHub Releases page.
 2. Extract the entire ZIP to a normal folder. Do not run the files from inside the ZIP.
-3. Run **`INSTALL TEST CERTIFICATE FIRST.cmd`** and approve the Administrator/UAC prompt.
-4. Run **`3 ENABLE TESTSIGNING.cmd`** and approve the Administrator/UAC prompt.
+3. Run **`INSTALL TEST CERTIFICATE FIRST.cmd`** as Administrator and approve the UAC prompt if prompted.
+4. Run **`3 ENABLE TESTSIGNING.cmd`** as Administrator and approve the UAC prompt if prompted.
 5. **Reboot Windows.**
-6. Run **`4 INSTALL DRIVER.cmd`** and approve the Administrator/UAC prompt.
-7. Reboot Windows again, or disconnect/reconnect the Magic Keyboard.
+6. Run **`4 INSTALL DRIVER.cmd`** as Administrator and approve the UAC prompt if prompted.
+7. Connect the Magic Keyboard via Bluetooth or Lightning USB if you have not already.
 8. Test the mappings listed above.
+9. Reboot Windows again or disconnect/reconnect the Magic Keyboard if needed.
 
 You do **not** need Visual Studio, the Windows SDK, or the WDK to use the prebuilt release. Those are only required if you want to build the driver from source.
 
@@ -56,9 +57,9 @@ If `3 ENABLE TESTSIGNING.cmd` reports that TESTSIGNING cannot be changed because
 
 ## Uninstall
 
-1. Run **`5 UNINSTALL DRIVER.cmd`** as Administrator.
+1. Run **`5 UNINSTALL DRIVER.cmd`** as Administrator and approve the UAC prompt if prompted.
 2. Reboot Windows.
-3. If you no longer need Windows TESTSIGNING mode for anything else, run **`6 DISABLE TESTSIGNING.cmd`**.
+3. If you no longer need Windows TESTSIGNING mode for anything else, run **`6 DISABLE TESTSIGNING.cmd`** as Administrator and approve the UAC prompt if prompted.
 4. Reboot Windows again.
 
 The public test certificate is intentionally not removed automatically by the tested-working uninstall script. It can be removed manually later from the Local Computer certificate stores if desired.
