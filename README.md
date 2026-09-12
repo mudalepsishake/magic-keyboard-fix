@@ -15,7 +15,7 @@ Magic Keyboard Fix remaps the Apple-specific modifier/function behavior at the W
 
 - **Lightning-to-USB connection**. Support for the A1644 / PID 0267 USB path is included in the driver, but it has not yet been tested on real hardware.
 
-## Fixed mapping
+## Fixed mapping (makes the Magic Keyboard into a standard Windows keyboard in terms of keyboard layout)
 
 | Physical key | Windows result |
 | --- | --- |
@@ -27,7 +27,13 @@ Magic Keyboard Fix remaps the Apple-specific modifier/function behavior at the W
 
 The left side therefore behaves as:
 
-`Ctrl | Ctrl | Win | Alt | Space`
+`Ctrl | Ctrl | Win | Alt | Space | Alt | Ctrl`
+
+## Download
+
+**[Download Magic Keyboard Fix v1](https://github.com/mudalepsishake/magic-keyboard-fix/releases/download/v1/Magic-Keyboard-Fix-v1-test-signed.zip)**
+
+No Visual Studio or WDK is required to use the prebuilt driver. See the installation instructions below.
 
 ## Installing the prebuilt v1 release
 
