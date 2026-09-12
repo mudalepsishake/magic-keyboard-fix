@@ -42,6 +42,7 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 Write-Host ''
-Write-Host 'Installed. Reboot Windows, or disconnect/reconnect the keyboard, before testing the mappings.' -ForegroundColor Green
+Write-Host 'Installed. Connect the keyboard now if you havent already. Test the keyboard mappings below. If they work, the install was successful and the mappings should continue working. ' -ForegroundColor Green
 Write-Host 'Expected: Fn=Ctrl, Control=Ctrl, Option=Win, Command=Alt, Eject=Delete.'
+Write-Host 'If the keyboard mappings arent working, disconnect/reconnect the keyboard or reboot Windows.' -ForegroundColor Green
 Read-Host 'Press Enter to close'
