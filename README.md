@@ -47,7 +47,7 @@ The downloadable v1 driver is **test-signed**, not Microsoft production-signed. 
 6. Run **`4 INSTALL DRIVER.cmd`** as Administrator and approve the UAC prompt if prompted.
 7. Connect the Magic Keyboard via Bluetooth or Lightning USB if you have not already.
 8. Test the mappings listed above.
-9. Reboot Windows again or disconnect/reconnect the Magic Keyboard if needed.
+9. (Optional) Reboot Windows again or disconnect/reconnect the Magic Keyboard if needed.
 
 You do **not** need Visual Studio, the Windows SDK, or the WDK to use the prebuilt release. Those are only required if you want to build the driver from source.
 
