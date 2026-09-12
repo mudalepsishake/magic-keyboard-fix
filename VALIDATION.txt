@@ -1,0 +1,48 @@
+Magic Keyboard Fix v1 validation
+================================
+
+Build / package validation:
+- Built successfully as Release|x64 with the WindowsKernelModeDriver10.0 toolset.
+- Built with Microsoft Visual Studio 2026 Build Tools and Windows SDK/WDK 10.0.28000.0.
+- MagicKeyFix.sys compiled and linked successfully.
+- The INF passed verification after being updated for the current WDK requirements.
+- The driver package catalog was generated successfully.
+- The driver was test-signed successfully.
+
+Real-hardware validation:
+- Windows 10 x64.
+- Apple Magic Keyboard A1644 / PID 0267.
+- Bluetooth connection.
+- Driver installs, loads, and remaps the keyboard successfully on real hardware.
+
+Verified fixed mapping:
+- Fn -> Left Ctrl
+- Control -> Ctrl
+- Option -> Windows key
+- Command -> Alt
+- Eject -> Forward Delete
+
+A1644 assembly transform validation:
+- A1644Core.S assembled successfully to Windows x86-64 COFF A1644Core.obj.
+- COFF symbol table contains MagicKeyTransformA1644.
+- Disassembly was inspected to confirm the expected x64 instructions.
+- The same assembly body was loaded through a Microsoft-x64-ABI wrapper and
+  tested over all 256 modifier-byte values x 4 Fn/Eject states x 4 key-slot
+  layouts = 4096 cases.
+- Size<9 guard was also tested.
+- All transform tests passed.
+
+Transform behavior:
+- Fn bit (special byte bit 1) adds Left Ctrl.
+- Physical Control remains Control.
+- Option modifier bits become Windows/GUI modifier bits.
+- Command/GUI modifier bits become Alt modifier bits.
+- Eject bit (special byte bit 0) inserts HID Delete usage 0x4C into the first
+  free 6-key slot.
+- Fn/Eject special bits are then cleared before the report continues upward.
+
+Not yet verified:
+- Lightning-to-USB operation on real hardware.
+- Windows 11 operation on real hardware.
+- Keyboard models other than Apple Magic Keyboard A1644 / PID 0267.
+- Microsoft production-signed installation without TESTSIGNING mode.
