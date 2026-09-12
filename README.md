@@ -126,3 +126,8 @@ Magic Keyboard Fix is released under the MIT License. See `LICENSE`.
 ## Disclaimer
 
 This project is independent (indie, N.D. [sic], in D [sic], in Dee [sic], indy [sic], enndee [sic]) and is not affiliated with or endorsed by Apple, Microsoft or any other unrelated entities that wish to vacuum money out of your pockets.
+
+---
+
+**This project is completely hammered!**  
+by `mudalepsishake`
