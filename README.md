@@ -8,7 +8,7 @@ Magic Keyboard Fix remaps the Apple-specific modifier/function behavior at the W
 
 - Windows 10 x64
 - Apple Magic Keyboard A1644 / PID 0267
-- **A connection**
+- **A Bluetooth connection**
 - Driver builds, installs, loads, and remaps successfully on real hardware
 
 ## Not yet verified
