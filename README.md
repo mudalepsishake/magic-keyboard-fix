@@ -1,4 +1,4 @@
-# Magic Keyboard Fix v1
+# Windows Apple Magic Keyboard Fix v1
 
 Free Windows x64 HID lower-filter driver for the **Apple Magic Keyboard A1644 / PID 0267**.
 
