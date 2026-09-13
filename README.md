@@ -39,7 +39,7 @@ No Visual Studio or WDK is required to use the prebuilt driver. See the installa
 
 The downloadable v1 driver is **test-signed**, not Microsoft production-signed. Windows must therefore be in **TESTSIGNING** mode for the driver to load.
 
-1. Download **`Magic-Keyboard-Fix-v1-test-signed-EXACT.zip`** from the link above or from the GitHub Releases page.
+1. Download **`Magic-Keyboard-Fix-v1-test-signed.zip`** from the link above or from the GitHub Releases page.
 2. Extract the entire ZIP to a normal folder. Do not run the files from inside the ZIP.
 3. Run **`INSTALL TEST CERTIFICATE FIRST.cmd`** as Administrator and approve the UAC prompt if prompted.
 4. Run **`3 ENABLE TESTSIGNING.cmd`** as Administrator and approve the UAC prompt if prompted.
